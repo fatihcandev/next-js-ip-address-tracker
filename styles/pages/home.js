@@ -7,11 +7,21 @@ export const Main = styled.div`
 `
 
 export const Background = styled.div`
-  height: 275px;
+  height: 400px;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: url('/images/pattern-bg.png') center/cover no-repeat;
   position: relative;
 `
 
 export const MapContainer = styled.div`
   height: 100%;
+`
+
+export const Title = styled.span`
+  font-weight: 500;
+  font-size: 32px;
+  color: white;
 `
