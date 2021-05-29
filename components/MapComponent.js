@@ -1,23 +1,24 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api'
 
 const MapComponent = ({ position }) => {
-  return (
-    <MapContainer
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: process.env.googleMapsApiKey,
+  })
+
+  return isLoaded ? (
+    <GoogleMap
+      mapContainerStyle={{
+        width: '100%',
+        height: '100%',
+      }}
       center={position}
-      zoom={13}
-      scrollWheelZoom={false}
-      style={{ width: '100%', height: '100%' }}
+      zoom={10}
     >
-      <TileLayer
-        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <Marker position={position}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily Âcustomizable.
-        </Popup>
-      </Marker>
-    </MapContainer>
+      <Marker position={position} />
+    </GoogleMap>
+  ) : (
+    <></>
   )
 }
 
