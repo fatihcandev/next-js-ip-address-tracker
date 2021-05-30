@@ -17,15 +17,13 @@ import {
 
 const Home = ({ geolocation }) => {
   const [searchValue, setSearchValue] = useState('')
-  const [position, setPosition] = useState({
-    lat: 0,
-    lng: 0,
-  })
   const [locationInfo, setLocationInfo] = useState({
     ip: '',
     location: '',
     timezone: '',
     isp: '',
+    lat: 0,
+    lng: 0,
   })
 
   const handleGeolocation = useCallback(geolocationData => {
@@ -38,13 +36,14 @@ const Home = ({ geolocation }) => {
       time_zone: timezone,
       asn_org: isp,
     } = geolocationData
-    setPosition({ lat, lng })
     const location = `${city}, ${country}`
     setLocationInfo({
       ip,
       location,
       timezone,
       isp,
+      lat,
+      lng,
     })
   }, [])
 
@@ -83,7 +82,12 @@ const Home = ({ geolocation }) => {
           </LocationInfosContainer>
         </Background>
         <MapContainer>
-          <MapComponent position={position} />
+          <MapComponent
+            position={{
+              lat: locationInfo.lat,
+              lng: locationInfo.lng,
+            }}
+          />
         </MapContainer>
       </Main>
     </>
