@@ -6,10 +6,13 @@ export const Container = styled.form`
   display: flex;
   height: 55px;
   width: 100%;
-  max-width: 540px;
 
   @media ${breakpoints.mdMax} {
-    padding: 0 24px;
+    padding: 0 16px;
+  }
+
+  @media ${breakpoints.md} {
+    max-width: 540px;
   }
 `
 

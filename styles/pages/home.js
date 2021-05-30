@@ -39,12 +39,19 @@ export const LocationInfosContainer = styled.div`
   position: absolute;
   bottom: -215px;
   z-index: 5;
+  left: 16px;
+  right: 16px;
+
+  @media ${breakpoints.md} {
+    max-width: 89%;
+    left: unset;
+    right: unset;
+  }
 
   @media ${breakpoints.lg} {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: max-content;
     row-gap: unset;
-    max-width: 89%;
     bottom: -75px;
   }
 
