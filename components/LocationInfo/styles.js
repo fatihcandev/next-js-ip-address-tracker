@@ -12,7 +12,7 @@ export const Container = styled.div`
     align-items: flex-start;
 
     & + div {
-      border-left: 1px solid ${colors.darkGray};
+      border-left: 1px solid lightgrey;
     }
   }
 `
