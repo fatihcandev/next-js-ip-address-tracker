@@ -1,6 +1,6 @@
 # Next.js IP Address Tracker
 
-# TODO
+# ✅ TODO
 
 - IP Address validation and input error handling
 - Showing loading in map and button while api request
