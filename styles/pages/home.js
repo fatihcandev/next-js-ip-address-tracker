@@ -31,7 +31,7 @@ export const Title = styled.span`
 export const LocationInfosContainer = styled.div`
   display: grid;
   grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   row-gap: 20px;
   padding: 30px 0;
   background-color: white;
