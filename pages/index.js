@@ -33,10 +33,11 @@ const Home = ({ geolocation }) => {
       ip,
       country,
       city,
+      zip_code: zip,
       time_zone: timezone,
       asn_org: isp,
     } = geolocationData
-    const location = `${city}, ${country}`
+    const location = `${city}, ${country}, ${zip}`
     setLocationInfo({
       ip,
       location,
