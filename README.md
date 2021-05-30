@@ -13,5 +13,5 @@ https://next-js-ip-address-tracker.vercel.app/
 
 - [Next.js](https://nextjs.org)
 - [Styled Components](https://styled-components.com/)
-- [React Leaflet](https://react-leaflet.js.org/) - for map
+- [React Google Maps](https://github.com/JustFly1984/react-google-maps-api)
 - [IFConfig](https://ifconfig.co/) - for geolocation info
