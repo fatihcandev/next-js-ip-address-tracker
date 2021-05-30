@@ -3,6 +3,6 @@ module.exports = {
     webpack5: true,
   },
   env: {
-    googleMapsApiKey: 'AIzaSyBrptQhBSucVz1vDzWmI8wepfjpfMvzTS8',
+    googleMapsApiKey: 'AIzaSyBWlYWT_SuWzpl-xsYIwj1ndgTjquhipb0',
   },
 }
