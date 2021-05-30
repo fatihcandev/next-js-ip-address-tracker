@@ -1,5 +1,9 @@
 # Next.js IP Address Tracker
 
+# 🌍 Live
+
+https://next-js-ip-address-tracker.vercel.app/
+
 # 🧰 Toolbox
 
 - [Next.js](https://nextjs.org)
