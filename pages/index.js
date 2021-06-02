@@ -95,7 +95,7 @@ const Home = ({ geolocation }) => {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const geolocation = await fetcher('https://ifconfig.co/json')
   return {
     props: {
